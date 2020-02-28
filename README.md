@@ -12,10 +12,10 @@ yarn add strapi-provider-upload-aws-s3-enhanced
 - **Secret Key** - Access secret key
 - **Bucket Region** - Region where your bucket is created
 - **Bucket Name** - Name of your bucket
-- **Upload path** - custom upload path (**/** to skip)
+- **Upload path** - custom upload path (set **/** to skip)
 - **Public-read object ACL** - set public read ACL, make sure your bucket policy allows this
-- **Custom URL** - CloudFront or your custom URL (**-** to skip)
-- **Thumbnails** - list of thumbnail sizes, without enlargement (**-** to skip). Adds suffix `-[width]x[height]`. Configuration sample:
+- **Custom URL** - CloudFront or your custom URL (set **-** to skip)
+- **Thumbnails** - list of thumbnail sizes, without enlargement (set **-** to skip). Adds suffix `-[width]x[height]`. Configuration sample:
 ```
 1200x800
 800x600
