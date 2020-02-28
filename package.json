@@ -1,0 +1,36 @@
+{
+  "name": "strapi-provider-upload-aws-s3-enhanced",
+  "version": "3.0.0-beta.17.5",
+  "description": "Enhanced AWS S3 provider for strapi upload",
+  "license": "MIT",
+  "homepage": "https://github.com/garretua/strapi-provider-upload-aws-s3-enhanced",
+  "keywords": [
+    "upload",
+    "aws",
+    "s3",
+    "strapi"
+  ],
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib",
+  "dependencies": {
+    "aws-sdk": "^2.629.0",
+    "sharp": "^0.24.1"
+  },
+  "strapi": {
+    "isProvider": true
+  },
+  "author": {
+    "email": "alex.mukho@gmail.com",
+    "name": "garretua"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:garretua/strapi-provider-upload-aws-s3-enhanced.git"
+  },
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  }
+}
