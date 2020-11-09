@@ -1,5 +1,7 @@
 # strapi-provider-upload-aws-s3-enhanced
-Enhanced AWS S3 provider for Strapi upload: thumbnails, image compression, WebP format, custom domain.
+![Supported Strapi version](https://img.shields.io/badge/Strapi-3.2.4-green.svg) ![GitHub license](https://img.shields.io/github/license/garretua/strapi-provider-upload-aws-s3-enhanced.svg)
+
+Enhanced AWS S3 provider for Strapi uploads: thumbnails, image compression, WebP format, custom domain.
 
 ## Instalation
 
@@ -7,21 +9,43 @@ Enhanced AWS S3 provider for Strapi upload: thumbnails, image compression, WebP 
 yarn add strapi-provider-upload-aws-s3-enhanced
 ```
 
-## Settings
-- **Access Key** - Access key for your AWS account with required permissions
-- **Secret Key** - Access secret key
-- **Bucket Region** - Region where your bucket is created
-- **Bucket Name** - Name of your bucket
-- **Upload path** - custom upload path (set **/** to skip)
-- **Public-read object ACL** - set public read ACL, make sure your bucket policy allows this
-- **Custom URL** - CloudFront or your custom URL (set **-** to skip)
-- **Thumbnails** - list of thumbnail sizes, without enlargement (set **-** to skip). Adds suffix `-[width]x[height]`. Configuration sample:
-```
-1200x800
-800x600
-```
-- **Generate WebP** - generate WebP format for each thumbnail
-- **Quality** - image quality from 1 to 100 (**80** is recommended)
+## Configuration
+Update your `config/plugins.js`:
+
+    module.exports = ({ env }) => ({
+      upload: {
+        provider: 'aws-s3-enhanced',
+        providerOptions: {
+          accessKeyId: env('AWS_ACCESS_KEY_ID'),
+          secretAccessKey: env('AWS_ACCESS_SECRET'),
+          region: env('AWS_REGION'),
+          params: {
+            Bucket: env('AWS_BUCKET'),
+          },
+          customDomain: env('CDN_DOMAIN'),
+          prefix: null,
+          quality: 80,
+          webp: true,
+          thumbnails: [
+            {
+              name: 'custom',
+              options: {
+                width: 1200,
+                withoutEnlargement: true,
+              },
+            },
+            {
+              name: 'preview',
+              options: {
+                width: 500,
+                height: 300,
+                fit: 'cover',
+              },
+            },
+          ],
+        },
+      },
+    });
 
 
 ## License
