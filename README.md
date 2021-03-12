@@ -23,6 +23,7 @@ Update your `config/plugins.js`:
             Bucket: env('AWS_BUCKET'),
           },
           customDomain: env('CDN_DOMAIN'),
+          endpoint: env('CUSTOM_S3_ENDPOINT'), // For third-party S3-compatible storages
           prefix: null,
           quality: 80,
           webp: true,
