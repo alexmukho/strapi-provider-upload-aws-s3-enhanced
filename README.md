@@ -1,5 +1,5 @@
 # strapi-provider-upload-aws-s3-enhanced
-![Supported Strapi version](https://img.shields.io/badge/Strapi-3.5.2-green.svg) ![GitHub license](https://img.shields.io/github/license/garretua/strapi-provider-upload-aws-s3-enhanced.svg)
+![Supported Strapi version](https://img.shields.io/badge/Strapi-3.5.4-green.svg) ![GitHub license](https://img.shields.io/github/license/garretua/strapi-provider-upload-aws-s3-enhanced.svg)
 
 Enhanced AWS S3 provider for Strapi uploads: thumbnails, image compression, WebP format, custom domain.
 

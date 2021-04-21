@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-aws-s3-enhanced",
-  "version": "3.5.3",
+  "version": "3.5.4",
   "description": "Enhanced AWS S3 provider for Strapi upload: image resizing, custom domain and more",
   "license": "MIT",
   "homepage": "https://github.com/garretua/strapi-provider-upload-aws-s3-enhanced",
@@ -16,7 +16,7 @@
   "main": "./lib",
   "dependencies": {
     "aws-sdk": "^2.775.0",
-    "sharp": "0.28.1"
+    "sharp": "^0.28.1"
   },
   "strapi": {
     "isProvider": true
