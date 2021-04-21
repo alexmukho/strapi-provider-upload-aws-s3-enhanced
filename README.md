@@ -27,6 +27,7 @@ Update your `config/plugins.js`:
           prefix: null,
           quality: 80,
           webp: true,
+          accessLevel: env('ACCESS_LEVEL'), // Default set to: 'public-read'
           thumbnails: [
             {
               name: 'custom',
